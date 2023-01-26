@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+    <title>Mi Curriculum Vitae</title>
+
+</head>
+<body>
+    <h1>Curriculum Vitae</h1>
+    <img src="imagenes/0.jpg" alt="Jennie Nichols" height="300px" width="300px" />
+    <p>Datos Personales</p>
+    <ul>
+        <li>Nombre: Jennie Nichols</li>
+        <li>Direccion: Valwood Pkwy 8929</li>
+        <li>Ciudad: Billings</li>
+        <li>Estado: Michigan</li>
+        <li>Pais: Estados Unidos</li>
+        <li>Codigo Postal: 63104</li>
+        <li>Email: jennie.nichols@example.com</li>
+        <li>Fecha de nacimiento: 03/02/1952</li>
+    </ul>
+    <form action="" method="post">
+        <label>Nombre</label>
+        <input type="text" name="Nombre" placeholder="Ingrese su Nombre" />
+        <label>Apellido</label>
+        <input type="text" name="Apellido" placeholder="Ingrese su Apellido" />
+        <label>E-mail</label>
+        <input type="email" name="E-mail" placeholder="Ingrese su E-mail" />
+        <input type="text" name="Mensaje" placeholder="Ingrese su Mensaje" />
+        <input type="submit" value="Enviar"> 
+   </form>
+
+   <p>Click en el boton para tener tus coordenadas.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Localizacion no esta soportada por tu navegador, por favor usa otro navegador.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+
+    <span>Gracias por la oportunidad.</span>
+</body>
+</html>
