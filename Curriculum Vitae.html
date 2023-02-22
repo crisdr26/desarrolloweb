@@ -8,23 +8,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="image/png" sizes="16x16" href="imagenes/favicon-16x16.png">
     <title>Mi Curriculum Vitae</title>
 
 </head>
 <body>
-    <h1>Curriculum Vitae</h1>
+  <section>
+  <h1>Curriculum Vitae</h1>
     <img src="imagenes/0.jpg" alt="Jennie Nichols" height="300px" width="300px" />
-    <p>Datos Personales</p>
-    <ul>
-        <li>Nombre: Jennie Nichols</li>
-        <li>Direccion: Valwood Pkwy 8929</li>
-        <li>Ciudad: Billings</li>
-        <li>Estado: Michigan</li>
-        <li>Pais: Estados Unidos</li>
-        <li>Codigo Postal: 63104</li>
-        <li>Email: jennie.nichols@example.com</li>
-        <li>Fecha de nacimiento: 03/02/1952</li>
-    </ul>
+      <h2>Datos Personales</h2>
+        <ul>
+          <li>Nombre: Jennie Nichols</li>
+          <li>Direccion: Valwood Pkwy 8929</li>
+          <li>Ciudad: Billings</li>
+          <li>Estado: Michigan</li>
+          <li>Pais: Estados Unidos</li>
+          <li>Codigo Postal: 63104</li>
+          <li>Email: jennie.nichols@example.com</li>
+          <li>Fecha de nacimiento: 03/02/1952</li>
+        </ul>
+        <p>Estudie Primeros Pasos en el Desarrollo Front-End en Argentina Programa 4.0</p>
+  </section>
     <form action="" method="post">
         <label>Nombre</label>
         <input type="text" name="Nombre" placeholder="Ingrese su Nombre" />
@@ -35,31 +39,28 @@
         <input type="text" name="Mensaje" placeholder="Ingrese su Mensaje" />
         <input type="submit" value="Enviar"> 
    </form>
-
+ 
    <p>Click en el boton para tener tus coordenadas.</p>
 
-<button onclick="getLocation()">Try It</button>
+<button onclick="getLocation()">Intentalo</button>
 
-<p id="demo"></p>
+<button type="button" id="boton_color">Cambiar color de fondo</button>
 
-<script>
-var x = document.getElementById("demo");
+<button type="button" id="boton_default">Restaurar color de fondo</button>
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Localizacion no esta soportada por tu navegador, por favor usa otro navegador.";
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-</script>
+<button type="button" id="boton_ocultar">Ocultar el texto</button>
 
 
-    <span>Gracias por la oportunidad.</span>
+<p id="demo">
+
+<script src="js/function.js"></script>
+
+</p>
+
+</body>
+
+<p class="Prueba"> Aprendi Java en Argentina Programa 4.0</p>
+
+<span>Gracias por la oportunidad.</span>
 </body>
 </html>
